@@ -19,6 +19,9 @@ require('bootstrap-sass');
 
 window.Vue = require('vue');
 
+import Pusher from 'pusher-js';
+
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -42,7 +45,7 @@ import Echo from "laravel-echo";
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: Laravel.pusherKey,
-    cluster: Laravel.pusherCluster,
+    key: '856fa8e8dd28c484e28d',
+    cluster: 'eu',
     encrypted: true
 });
