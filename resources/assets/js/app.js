@@ -39,7 +39,12 @@ const app = new Vue({
         fetchMessages() {
             axios.get('/messages').then(response => {
                 this.messages = response.data;
-            });
+            }).catch(function (error) {
+                if (error.response) {
+                  console.log(error.response.data);
+                }
+              });
+            
         },
         addMessage(message) {
             this.messages.push(message);
